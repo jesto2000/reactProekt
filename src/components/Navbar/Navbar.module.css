@@ -1,0 +1,25 @@
+.nav{
+    grid-area: n;
+    background: blueviolet;
+}
+
+.link{
+  color:white;
+   border: solid 1px black;
+    margin-left: 20px;
+    width: 100px;
+    margin-top: 5px;
+    text-align: center;
+}
+.link.me{
+  margin-top: 30px;
+  color:black;
+
+}
+.link a{
+ color:white;
+
+}
+a.active{
+ color:black;
+}

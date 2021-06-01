@@ -1,0 +1,23 @@
+
+.post{
+    border: 1px solid darkblue;
+    margin: 5px;
+
+
+}
+.post img{
+ border-radius: 25px;
+ width: 50px;
+}
+.post button{
+    border: 1px solid transparent;
+    background-color: #65a3be;
+    box-shadow: none;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+    -webkit-font-smoothing: antialiased;
+margin: 5px;
+}

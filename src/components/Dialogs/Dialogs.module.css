@@ -1,0 +1,38 @@
+.content {
+
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    padding: 20px;
+    border: 1px solid black;
+    margin: 20px;
+}
+
+
+.content_names {
+
+
+}
+
+.content_dialogs {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 13px;
+
+}
+
+.names a.active {
+    color: black;
+}
+
+.names a {
+    color: white;
+
+}
+
+.messages {
+    padding: 2px;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 13px;
+
+}
