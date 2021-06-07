@@ -3,9 +3,10 @@ import './App.css';
 import Header from "./components/Header/Header";
 import Profile from "./components/Profile/Profile";
 import Navbar from "./components/Navbar/Navbar";
-import Dialogs from "./components/Dialogs/Dialogs";
+
 
 import {Switch, Route} from 'react-router-dom';
+import Dilogs_W from "./components/Dialogs/Dilogs_W";
 
 
 const App = (props) => {
@@ -23,9 +24,7 @@ const App = (props) => {
 
 
 
-                <Route path='/dialogs' render={() => <Dialogs  datadialogs={props.data.dataDialogs}
-                                                               metodMain={props.metodMain}
-                />}/>
+                <Route path='/dialogs' render={() => <Dilogs_W/>}/>
             </div>
         </div>)
     ;

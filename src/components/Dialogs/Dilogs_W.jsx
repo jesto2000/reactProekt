@@ -20,3 +20,5 @@ let DilogsMetods =(action)=>{
 }
 
 let Dilogs_W = connect(DilogsStore,DilogsMetods)(Dialogs)
+
+export default Dilogs_W;
