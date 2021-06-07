@@ -4,13 +4,13 @@ import {connect} from "react-redux";
 import Dialogs from "./Dialogs";
 
 
-let DilogsStore = (state)=>{
+let DilogsStoreToProps = (state)=>{
  return{
      DialogsData:state.dataDialogs
  }
 }
 
-let DilogsMetods =(action)=>{
+let DilogsMetodsToProps =(action)=>{
   return{
    addMesege:()=>{action(addMessageActive())}
   },{
@@ -19,6 +19,6 @@ let DilogsMetods =(action)=>{
   }
 }
 
-let Dilogs_W = connect(DilogsStore,DilogsMetods)(Dialogs)
+let Dilogs_W = connect(DilogsStoreToProps,DilogsMetodsToProps)(Dialogs)
 
 export default Dilogs_W;
