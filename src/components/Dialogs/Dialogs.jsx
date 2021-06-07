@@ -7,8 +7,8 @@ import {addMessageActive, addNewMessageActive} from "../datafile/DilogsPageRedus
 
 const Dialogs = (props) => {
 
-    let names = props.datadialogs.names;
-    let messages = props.datadialogs.messages;
+    let names = props.DialogsData.names;
+    let messages = props.DialogsData.messages;
 
     let masivNames = names.map(p => <Names name={p.namechar} id={p.id}/>);
     let masivMesages = messages.map(p => <Messages messages={p.message} id={p.id}/>);
@@ -17,11 +17,11 @@ const Dialogs = (props) => {
 
     let mesageChenge = () => {
         let mesage = text.current.value;
-        props.metodMain(addNewMessageActive(mesage));
+        props.addNewMesage(mesage);
     }
     let mesageAdd = () => {
 
-        props.metodMain(addMessageActive());
+        props.addMesege();
     }
 
 
@@ -29,7 +29,7 @@ const Dialogs = (props) => {
         <div className={h.content}>
             <div> {masivNames} </div>
             <div>
-                <textarea ref={text} onChange={mesageChenge} value={props.datadialogs.newmessage}></textarea>
+                <textarea ref={text} onChange={mesageChenge} value={props.DialogsData.newmessage}></textarea>
                 <button onClick={mesageAdd}>post</button>
                 {masivMesages}
             </div>

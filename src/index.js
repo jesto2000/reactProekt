@@ -4,16 +4,17 @@ import baza from "./components/datafile/data-redux";
 import ReactDOM from "react-dom";
 import {BrowserRouter} from "react-router-dom";
 import App from "./App";
+import {Provider} from "react-redux";
 
 
 const renderDom = (data) => {
     return (ReactDOM.render(
-            <React.StrictMode>
+            <Provider store={data}>
                 <BrowserRouter>
-                    <App data={data} metodMain={baza.dispatch.bind(baza)} />
+                    <App data={data} metodMain={baza.dispatch.bind(baza)}/>
                 </BrowserRouter>
-
-            </React.StrictMode>,
+            </Provider>
+            ,
             document.getElementById('root')
         )
 
@@ -25,7 +26,7 @@ const renderDom = (data) => {
 renderDom(baza.getState());
 console.log(baza.getState());
 
-baza.subscribe(()=>{
+baza.subscribe(() => {
 
     let data = baza.getState();
     renderDom(data);
