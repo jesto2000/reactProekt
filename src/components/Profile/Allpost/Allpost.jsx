@@ -3,6 +3,7 @@ import h from './Allpost.module.css';
 import Post from "./Post/Post";
 import Headerpost from "./Headerpost/Headerpost";
 import {chengePost} from "../../datafile/data";
+import Headerpost_W from "./Headerpost/Headerpost_W";
 
 const Allpost = (props) => {
     let posts = props.PostsData.posts;
@@ -11,10 +12,7 @@ const Allpost = (props) => {
 
     return (
         <div className={h.post}>
-            <Headerpost metodMain={props.matodMain}
-
-                        newpost={props.newpost}
-            />
+            <Headerpost_W/>
 
             {MayPost}
         </div>

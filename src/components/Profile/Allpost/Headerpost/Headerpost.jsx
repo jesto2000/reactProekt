@@ -1,10 +1,10 @@
 import React from 'react';
 import h from './Headerpost.module.css';
-import {addNewPostActive, addPostActive} from "../../../datafile/ProfileHeaderReduser";
+
 
 
 const Headerpost = (props) => {
-
+debugger
 
     let text = React.createRef();
 
