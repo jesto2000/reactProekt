@@ -5,8 +5,7 @@ import Headerpost from "./Headerpost/Headerpost";
 import {chengePost} from "../../datafile/data";
 
 const Allpost = (props) => {
-
-    let posts = props.PostsData.post;
+    let posts = props.PostsData.posts;
 
     let MayPost =posts.map(p=><Post postmesage={p.post} nomer={p.id} />);
 

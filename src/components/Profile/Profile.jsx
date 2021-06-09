@@ -5,7 +5,7 @@ import ProfileInf from "./ProfileInf/ProfileInf";
 import Allpost_W from "./Allpost/Allpost_W";
 
 
-const Profile = (props) => {
+const Profile = () => {
 
 
 
