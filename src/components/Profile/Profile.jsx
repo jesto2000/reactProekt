@@ -1,7 +1,8 @@
 import React from 'react';
 import h from './Profile.module.css';
-import Allpost from "./Allpost/Allpost";
+
 import ProfileInf from "./ProfileInf/ProfileInf";
+import Allpost_W from "./Allpost/Allpost_W";
 
 
 const Profile = (props) => {
@@ -12,11 +13,7 @@ const Profile = (props) => {
         <h2>Текущее время {new Date().toLocaleTimeString()}.</h2>
         <ProfileInf/>
 
-        <Allpost  baza={props.datapost.posts}
-                  matodMain={props.metodMain}
-
-                  newpost={props.datapost.newpost}
-        />
+        <Allpost_W/>
 
 
     </div>
