@@ -1,3 +1,5 @@
+
+
 const ADD_MESSAGES = 'ADD_MESSAGES';
 const ADD_NEWMESAGE ='ADD-NEWMESAGE';
 
@@ -21,28 +23,29 @@ let startdata ={names: [
 }
 
 const DilogsPageReduser = (data=startdata,activ) =>{
-if(activ.type===ADD_MESSAGES) {
+switch(activ.type){
+    case ADD_MESSAGES:
         let mes = {
             id: 10,
             message: data.newmessage
         }
         data.messages.push(mes);
         data.newmessage = '';
+        return data;
 
-    }else if(activ.type===ADD_NEWMESAGE){
+    case ADD_NEWMESAGE:
         data.newmessage = activ.text;
         console.log(data.newmessage)
+    return data;
 
-    }
 
 
-    return data
+default:
+           return data
 }
-export const addMessageActive =()=>{
-    return  {type: ADD_MESSAGES} ;
-}
-export const addNewMessageActive =(message)=>{
-    return  {type: ADD_NEWMESAGE, text: message} ;
-}
+export const addMessageActive =()=>({
+      type: ADD_MESSAGES
+})
+export const addNewMessageActive =(message)=>({type: ADD_NEWMESAGE, text: message})
 
 export  default DilogsPageReduser;
