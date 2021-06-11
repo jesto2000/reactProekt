@@ -13,7 +13,7 @@ let PostsStoreToProps = (state)=>{
 let PostsMetodsToProps =(action)=>{
     return{
         addPost:()=>{action(addPostActive())}
-    },{
+    ,
         addNewPost:(message)=>{action(addNewPostActive(message))}
 
     }

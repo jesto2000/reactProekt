@@ -4,7 +4,7 @@ import h from './Headerpost.module.css';
 
 
 const Headerpost = (props) => {
-debugger
+
 
     let text = React.createRef();
 

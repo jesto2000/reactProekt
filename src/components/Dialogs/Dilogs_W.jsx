@@ -12,11 +12,11 @@ let DilogsStoreToProps = (state)=>{
 
 let DilogsMetodsToProps =(action)=>{
   return{
-   addMesege:()=>{action(addMessageActive())}
-  },{
-    addNewMesage:(message)=>{action(addNewMessageActive(message))}
+      addMesege: () => {
+          action(addMessageActive())
+      },
 
-  }
+    addNewMesage:(message)=>{action(addNewMessageActive(message))}}
 }
 
 let Dilogs_W = connect(DilogsStoreToProps,DilogsMetodsToProps)(Dialogs)

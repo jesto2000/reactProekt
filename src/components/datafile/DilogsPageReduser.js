@@ -41,8 +41,8 @@ switch(activ.type){
 
 
 default:
-           return data
-}
+           return data;
+}}
 export const addMessageActive =()=>({
       type: ADD_MESSAGES
 })

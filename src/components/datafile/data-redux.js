@@ -16,4 +16,7 @@ let metods = combineReducers({
 
 let data = createStore(metods);
 
+window.data = data;
+
+
  export default data;

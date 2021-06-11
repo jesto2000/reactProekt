@@ -2,7 +2,7 @@ import React from 'react';
 import h from './Dialogs.module.css';
 import Names from "./Names/Names";
 import Messages from "./Mesages/Mesages";
-import {addMessageActive, addNewMessageActive} from "../datafile/DilogsPageReduser";
+
 
 
 const Dialogs = (props) => {
