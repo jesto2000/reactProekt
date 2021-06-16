@@ -22,26 +22,26 @@ let startdata ={names: [
     newmessage:''
 }
 
-const DilogsPageReduser = (data=startdata,activ) =>{
+const DilogsPageReduser = (state=startdata,activ) =>{
 switch(activ.type){
-    case ADD_MESSAGES:
+    case ADD_MESSAGES:{
         let mes = {
             id: 10,
-            message: data.newmessage
+            message: state.newmessage
         }
-        data.messages.push(mes);
-        data.newmessage = '';
-        return data;
+        state.messages.push(mes);
+        state.newmessage = '';
+        return state}
 
-    case ADD_NEWMESAGE:
-        data.newmessage = activ.text;
-        console.log(data.newmessage)
-    return data;
+    case ADD_NEWMESAGE:{
+        state.newmessage = activ.text;
+        console.log(state.newmessage)
+    return state}
 
 
 
 default:
-           return data;
+           return state;
 }}
 export const addMessageActive =()=>({
       type: ADD_MESSAGES

@@ -1,3 +1,5 @@
+import {whenMapStateToPropsIsMissing} from "react-redux/lib/connect/mapStateToProps";
+
 const ADD_POST = 'ADD-POST';
 const ADD_NEWPOST = 'ADD-NEWPOST';
 
@@ -12,31 +14,35 @@ let startdata = {
     newpost: ''
 };
 
-const ProfileHeaderReduser = (data=startdata,activ) =>{
-    if(activ.type===ADD_POST){
-        let post = {
-            id: 10,
-            post: data.newpost
+const ProfileHeaderReduser = (state = startdata, activ) => {
+    switch (activ.type) {
+        case ADD_POST: {
+            let post = {
+                id: 10,
+                post: state.newpost
+            }
+            state.posts.push(post);
+            state.newpost = '';
+            return state;
         }
-        data.posts.push(post);
-        data.newpost = '';
 
 
-    }else if(activ.type===ADD_NEWPOST){
-        data.newpost = activ.text;
-        console.log(data.newpost);
+        case ADD_NEWPOST: {
+            state.newpost = activ.text;
+            console.log(state.newpost);
+            return state;
 
 
+        }
+        default:
+            return state;
     }
-
-
-    return data
 }
-export const addPostActive =()=>{
-    return  {type: ADD_POST} ;
+export const addPostActive = () => {
+    return {type: ADD_POST};
 }
-export const addNewPostActive =(message)=>{
-    return  {type: ADD_NEWPOST, text: message} ;
+export const addNewPostActive = (message) => {
+    return {type: ADD_NEWPOST, text: message};
 }
 
-export  default ProfileHeaderReduser;
+export default ProfileHeaderReduser;
