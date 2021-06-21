@@ -21,21 +21,21 @@ const ProfileHeaderReduser = (state = startdata, activ) => {
                 id: 10,
                 post: state.newpost
             }
-            return {...state,
-posts: [...state.posts,post],
+            return {
+                ...state,
+                posts: [...state.posts, post],
                 newpost: ''
 
             }
 
 
-
         case ADD_NEWPOST:
-            state.newpost = activ.text;
-            console.log(state.newpost);
-            return {...state,
-            newpost: activ.text
-            }
 
+            console.log(state.newpost);
+            return {
+                ...state,
+                newpost: activ.text
+            }
 
 
         default:

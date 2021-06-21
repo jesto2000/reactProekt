@@ -32,7 +32,7 @@ const DilogsPageReduser = (state = startdata, activ) => {
 
             return {
                 ...state,
-                messages: {...state.messages, newmes},
+                messages: [...state.messages, newmes],
                 newmessage: ''
             }
 
