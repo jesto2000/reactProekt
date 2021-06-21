@@ -5,8 +5,9 @@ import Profile from "./components/Profile/Profile";
 import Navbar from "./components/Navbar/Navbar";
 
 
-import {Switch, Route} from 'react-router-dom';
+import { Route} from 'react-router-dom';
 import Dilogs_W from "./components/Dialogs/Dilogs_W";
+import Users_W from "./components/Users/Users_W";
 
 
 const App = (props) => {
@@ -19,6 +20,7 @@ const App = (props) => {
             <div className='app-wrapper-content'>
 
                 <Route path='/profile' render={() => <Profile/>}/>
+                <Route path='/users' render={() => <Users_W/>}/>
 
 
 
