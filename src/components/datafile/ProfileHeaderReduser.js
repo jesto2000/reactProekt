@@ -16,24 +16,28 @@ let startdata = {
 
 const ProfileHeaderReduser = (state = startdata, activ) => {
     switch (activ.type) {
-        case ADD_POST: {
+        case ADD_POST:
             let post = {
                 id: 10,
                 post: state.newpost
             }
-            state.posts.push(post);
-            state.newpost = '';
-            return state;
-        }
+            return {...state,
+posts: [...state.posts,post],
+                newpost: ''
+
+            }
 
 
-        case ADD_NEWPOST: {
+
+        case ADD_NEWPOST:
             state.newpost = activ.text;
             console.log(state.newpost);
-            return state;
+            return {...state,
+            newpost: activ.text
+            }
 
 
-        }
+
         default:
             return state;
     }

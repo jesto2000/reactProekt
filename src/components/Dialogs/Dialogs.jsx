@@ -8,10 +8,10 @@ import Messages from "./Mesages/Mesages";
 const Dialogs = (props) => {
 
     let names = props.DialogsData.names;
-    let messages = props.DialogsData.messages;
+
 
     let masivNames = names.map(p => <Names name={p.namechar} id={p.id}/>);
-    let masivMesages = messages.map(p => <Messages messages={p.message} id={p.id}/>);
+    let masivMesages = props.DialogsData.messages.map(p => <Messages messages={p.message} id={p.id}/>);
 
     let text = React.createRef();
 
