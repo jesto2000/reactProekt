@@ -4,7 +4,7 @@ import h from './users.module.css';
 
 const Users = (props) => {
 
-    if (props.UsersData === 0) {
+    if (props.UsersData.length === 0) {
 
         props.getUsers([
             {
@@ -28,7 +28,7 @@ const Users = (props) => {
                         props.unfollow(u.id)
                     }}>Unfollow</button> :
                     <button onClick={() => {
-                        props.follow(u.id)
+                        props.Follow(u.id)
                     }}>Follow</button>}
             </div>
 

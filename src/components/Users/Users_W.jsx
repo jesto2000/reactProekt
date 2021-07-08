@@ -1,5 +1,5 @@
 import React from 'react';
-import connect from "react-redux";
+import {connect} from "react-redux";
 import Users from "./users";
 import {AddusersAC, FollowAC, UnfollowAC} from "../datafile/UsersPageReduser";
 ;
@@ -13,7 +13,7 @@ let UserStoreToProps = (state) => {
 
 let UserMetodsToProps = (action) => {
     return {
-        follow: (uid) => {
+        Follow: (uid) => {
             action(FollowAC(uid))
         }
         ,
