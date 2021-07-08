@@ -1,23 +1,27 @@
 import React from 'react';
-import {connect} from "react-redux";
+import connect from "react-redux";
 import Users from "./users";
+import {AddusersAC, FollowAC, UnfollowAC} from "../datafile/UsersPageReduser";
 ;
 
 
 let UserStoreToProps = (state) => {
     return {
-        UsersData: state.Users
+        UsersData: state.dataUsers.Users
     }
 }
 
 let UserMetodsToProps = (action) => {
     return {
-        addPost: () => {
-            action()
+        follow: (uid) => {
+            action(FollowAC(uid))
         }
         ,
-        addNewPost: () => {
-            action()
+        unfollow: (uid) => {
+            action(UnfollowAC(uid))
+        },
+        getUsers:(users) =>{
+            action(AddusersAC(users))
         }
 
     }
