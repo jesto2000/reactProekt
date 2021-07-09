@@ -2,13 +2,14 @@ const FOLLOW = 'FOLLOW'
 const UNFOLLOW = 'UNFOLLOW';
 const ADD_USERS = 'ADD-USERS';
 
-let Initialstate = {Users: []};
+let Initialstate = {users: []};
 
 const UsersPageReduser = (state = Initialstate, activ) => {
     switch (activ.type) {
         case FOLLOW:
+            console.log(state.users[activ.UserID].followed);
             return {
-                ...state, Users: state.Users.map(u => {
+                ...state, users: state.users.map(u => {
                         if (u.id === activ.UserID) {
                             return {...u, followed: true}
 
@@ -20,8 +21,9 @@ const UsersPageReduser = (state = Initialstate, activ) => {
             }
 
         case UNFOLLOW:
+             console.log(state.users[activ.UserID].followed);
              return {
-            ...state, Users: state.Users.map(u => {
+            ...state, users: state.users.map(u => {
                     if (u.id === activ.UserID) {
                         return {...u, followed: false}
 
@@ -31,9 +33,9 @@ const UsersPageReduser = (state = Initialstate, activ) => {
                 }
             )
         }
-        case ADD_USERS:
-            return {...state,Users: [...state.Users,...activ.Users]}
-
+        case ADD_USERS: {
+            return {...state, users: [...state.users, ...activ.Users]}
+        }
         default:
             return state;
     }
