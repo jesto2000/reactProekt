@@ -40,8 +40,8 @@ const UsersPageReduser = (state = Initialstate, activ) => {
             return state;
     }
 }
-export const UnfollowAC = (UserID) => ({type: FOLLOW, UserID})
-export const FollowAC = (UserID) => ({type: UNFOLLOW, UserID})
+export const UnfollowAC = (UserID) => ({type: UNFOLLOW, UserID})
+export const FollowAC = (UserID) => ({type: FOLLOW, UserID})
 export const AddusersAC = (Users) => ({type: ADD_USERS, Users})
 
 
