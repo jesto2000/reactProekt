@@ -7,7 +7,7 @@ let Initialstate = {users: []};
 const UsersPageReduser = (state = Initialstate, activ) => {
     switch (activ.type) {
         case FOLLOW:
-            console.log(state.users[activ.UserID].followed);
+
             return {
                 ...state, users: state.users.map(u => {
                         if (u.id === activ.UserID) {
@@ -21,7 +21,7 @@ const UsersPageReduser = (state = Initialstate, activ) => {
             }
 
         case UNFOLLOW:
-             console.log(state.users[activ.UserID].followed);
+
              return {
             ...state, users: state.users.map(u => {
                     if (u.id === activ.UserID) {
