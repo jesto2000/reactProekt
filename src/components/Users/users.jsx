@@ -10,7 +10,7 @@ const Users = (props) => {
                 {
                     id: 1,
                     photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Dmitry_Nagiev_2017_4.jpg/220px-Dmitry_Nagiev_2017_4.jpg',
-                    followed: false,
+                    followed: true,
                     fullName: 'Dmitry',
                     status: 'I am a boss',
                     location: {city: 'Minsk', country: 'Belarus'}
@@ -18,7 +18,15 @@ const Users = (props) => {
                 {
                     id: 2,
                     photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Dmitry_Nagiev_2017_4.jpg/220px-Dmitry_Nagiev_2017_4.jpg',
-                    followed: true,
+                    followed: false,
+                    fullName: 'Dmitry',
+                    status: 'I am a boss',
+                    location: {city: 'Minsk', country: 'Belarus'}
+                },
+                {
+                    id: 3,
+                    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Dmitry_Nagiev_2017_4.jpg/220px-Dmitry_Nagiev_2017_4.jpg',
+                    followed: false,
                     fullName: 'Dmitry',
                     status: 'I am a boss',
                     location: {city: 'Minsk', country: 'Belarus'}
